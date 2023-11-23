@@ -1,0 +1,22 @@
+dubbo:
+  application:
+    name: user-management-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: zookeeper://${zookeeper.address:127.0.0.1}:2181
+
+logging:
+  level:
+    org.springframework: DEBUG
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vocal
+    username: root
+    password: Mingjie810.
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
